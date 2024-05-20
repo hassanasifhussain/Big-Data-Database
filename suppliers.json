@@ -1,0 +1,58 @@
+[
+  {
+    "SupplierID": 1,
+    "Name": "Sample Supplier 1",
+    "Turnover": 1000000.00,
+    "StoreCount": 5,
+    "EmployeeCount": 50,
+    "Products": [
+      {
+        "ProductID": 101,
+        "SupplyPrice": 20.00
+      },
+      {
+        "ProductID": 102,
+        "SupplyPrice": 30.00
+      }
+    ],
+    "Certifications": [
+      {
+        "CertificationID": 1,
+        "CertificationDate": "2024-01-01",
+        "ExpiryDate": "2025-01-01",
+        "Status": "Active"
+      },
+      {
+        "CertificationID": 2,
+        "CertificationDate": "2023-05-15",
+        "ExpiryDate": "2024-05-15",
+        "Status": "Inactive"
+      }
+    ]
+  },
+  {
+    "SupplierID": 2,
+    "Name": "Sample Supplier 2",
+    "Turnover": 500000.00,
+    "StoreCount": 3,
+    "EmployeeCount": 30,
+    "Products": [
+      {
+        "ProductID": 201,
+        "SupplyPrice": 25.00
+      },
+      {
+        "ProductID": 202,
+        "SupplyPrice": 35.00
+      }
+    ],
+    "Certifications": [
+      {
+        "CertificationID": 3,
+        "CertificationDate": "2023-11-20",
+        "ExpiryDate": "2024-11-20",
+        "Status": "Active"
+      }
+    ]
+  }
+]
