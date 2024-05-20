@@ -1,0 +1,34 @@
+[
+  {
+    "MarketID": 1,
+    "Name": "Sample Market 1",
+    "Location": "Location X",
+    "MarketDay": "Monday",
+    "Products": [
+      {
+        "ProductID": 101,
+        "QuantityAvailable": 50
+      },
+      {
+        "ProductID": 102,
+        "QuantityAvailable": 30
+      }
+    ]
+  },
+  {
+    "MarketID": 2,
+    "Name": "Sample Market 2",
+    "Location": "Location Y",
+    "MarketDay": "Wednesday",
+    "Products": [
+      {
+        "ProductID": 201,
+        "QuantityAvailable": 70
+      },
+      {
+        "ProductID": 202,
+        "QuantityAvailable": 40
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "_id": 1,
+        "screenName": "Isy",
+        "nbFollowers": 3,
+        "tweets": [
+            {
+                "text": "This is my first tweet #yey #Happy",
+                "createdAt": "2016-02-10T10:50:42",
+                "hashtags": ["yey", "Happy"]
+            },
+            {
+                "text": "Dany@ what are your plans for the evening?",
+                "createdAt": "2016-02-10T18:50:42"
+            },
+            {
+                "text": "Go and visit this: http://bit.ly/29O9yYc #yey #DanseWithBirds",
+                "createdAt": "2016-05-10T09:12:42",
+                "hashtags": ["yey", "dancewithbirds"]
+            },
+            {
+                "text": "Looking forward for some holidays! #IneedSomeSun",
+                "createdAt": "2016-07-04T10:17:25",
+                "hashtags": ["jeVeuxDuSoleil"]
+            }
+        ],
+        "followers": [2, 3, 4]
+    },
+    {
+        "_id": 2,
+        "screenName": "Dany",
+        "nbFollowers": 2,
+        "tweets": [
+            {
+                "text": "Anyone tried the latest iPhone? http://bit.ly/29TunHh #LoveApple #iPhone15",
+                "createdAt": "2016-01-11T09:12:42",
+                "hashtags": ["loveapple", "iphone15"]
+            },
+            {
+                "text": "@Isy are you coming to the party? #HappyHour",
+                "createdAt": "2016-02-10T18:54:13",
+                "hashtags": ["HappyHour"]
+            }
+        ],
+        "followers": [3, 4]
+    },
+    {
+        "_id": 3,
+        "screenName": "Rosy",
+        "nbFollowers": 0,
+        "tweets": [
+            {
+                "text": "This is a tweet #Happy",
+                "createdAt": "2016-04-12T18:59:03",
+                "hashtags": ["Happy"]
+            },
+            {
+                "text": "I have a lot to say #Happy",
+                "createdAt": "2016-04-12T18:54:13",
+                "hashtags": ["Happy"]
+            }
+        ]
+    },
+    {
+        "_id": 4,
+        "screenName": "Anny",
+        "nbFollowers": 3,
+        "followers": [1, 2, 3]
+    }
+]

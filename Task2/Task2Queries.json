@@ -1,0 +1,25 @@
+db.users.find();
+
+db.users.updateOne({"screenName":"Isy"},{ $set:{"nbFollowers":5    }});
+
+db.users.updateOne( {"_id":2 },{$push:{"tweets":{"text":"yay a new tweet!" }}});
+
+db.users.find({"screenName":"Rosy"},{"tweets.1":1});
+
+db.users.aggregate([
+  { $unwind: "$tweets" }, // Unwind the "tweets" array
+  { $match: { "tweets.text": { $regex: "https?://\\S+" } } }, // Match tweets containing a URL
+  { $project: { "_id": 0, "screenName": 1, "tweets.text": 1 } } // Project only the screenName and the text of the tweet
+]);
+
+db.users.find().sort({"nbFollowers":-1}).limit(1);
+
+db.users.find( {"_id":{$in:[2,4]}} ,{ "screenName":1 }  );
+
+db.users.find({"tweets.createdAt":{$regex:/^2016-04/}})
+
+db.users.find({"tweets.hashtags":"Happy"})
+
+db.users.aggregate([ { $project: { "screenName": 1, "nbTweets": { $cond: { if: { $isArray: "$tweets" }, then: { $size: "$tweets" },  else: 0  } } } }] );
+
+db.users.aggregate( [ {$unwind:"$tweets"},{$project:{"screenName":1,"tweetText":"$tweets.text","nbHastags":{$size:{"$ifNull":["$tweets.hashtags",[]]}}}}]);

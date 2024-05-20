@@ -1,0 +1,40 @@
+[
+  {
+    "RetailerID": 1,
+    "Name": "Sample Retailer 1",
+    "Location": "Location A",
+    "Opening Hours": "9:00 AM - 6:00 PM",
+    "ContactInfo": "contact@example.com",
+    "Products": [
+      {
+        "ProductID": 101,
+        "Price": 29.99,
+        "QuantityInStock": 50
+      },
+      {
+        "ProductID": 102,
+        "Price": 39.99,
+        "QuantityInStock": 30
+      }
+    ]
+  },
+  {
+    "RetailerID": 2,
+    "Name": "Sample Retailer 2",
+    "Location": "Location B",
+    "Opening Hours": "8:00 AM - 7:00 PM",
+    "ContactInfo": "info@example.com",
+    "Products": [
+      {
+        "ProductID": 201,
+        "Price": 19.99,
+        "QuantityInStock": 70
+      },
+      {
+        "ProductID": 202,
+        "Price": 49.99,
+        "QuantityInStock": 40
+      }
+    ]
+  }
+]

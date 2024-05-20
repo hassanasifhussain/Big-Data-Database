@@ -1,0 +1,41 @@
+db.paris.find({category:"accommodation"},{name:1});
+
+db.paris.find({ phone: { $exists: true, $ne: null } }, { name: 1, phone: 1 });
+
+db.paris.find({website:{$exists:true},foursquare:{exists:true}},{name:1,website:1,foursquare:1} );
+
+db.paris.find( {   name:{$regex:/hotel/i} },{name:1});
+
+db.paris.find({services:{$size:5}},{name:1,services:1} );
+
+db.paris.distinct("category",{"reviews.rating":{$gte:4}});
+
+db.paris.find({address:'/rue de rome/i'},{name:1,coordinate:1});
+
+db.paris.aggregate([
+  { 
+    $unwind: "$reviews" // Unwind the reviews array
+  },
+  {
+    $match: { "reviews.source": "Facebook" } // Match reviews with source "Facebook"
+  },
+  {
+    $group: {
+      _id: "$name", // Group by place name
+      numReviews: { $sum: 1 } // Count the number of reviews
+    }
+  },
+  {
+    $sort: { numReviews: -1 } // Sort in descending order of numReviews
+  }
+]);
+
+
+// db.paris.aggregate([{$match:{category:"resturant"}},{$unwind:{"$reviews"},{$group:{_id:"$name",averageRating:{$avg:"$reviews.rating"},count:{$sum:1}}}}])
+
+db.paris.aggregate([{$match:{category:"resturant"}},{$unwind:"$reviews"},{$group:{_id:"$name",averageRating:{$avg:"$reviews.rating"},count:{$sum:1}}}]);
+
+db.paris.aggregate([ {$match:{category:"poi"}},{$unwind:"$review"},{$match:{"reviews.source":"Facebook"}},{$group:{_id:"$name",count:{$sum:1}}},{$sort:{count:-1}}]);
+
+
+

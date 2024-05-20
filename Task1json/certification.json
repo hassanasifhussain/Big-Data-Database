@@ -1,0 +1,33 @@
+[
+  {
+    "CertificationID": 1,
+    "Name": "ISO 9001",
+    "IssuingAuthority": "ISO",
+    "ValidityPeriod": "2024-12-31",
+    "Suppliers": [
+      {
+        "SupplierID": 101,
+        "CertificationDate": "2020-01-01",
+        "Status": "Active"
+      },
+      {
+        "SupplierID": 102,
+        "CertificationDate": "2021-03-15",
+        "Status": "Active"
+      }
+    ]
+  },
+  {
+    "CertificationID": 2,
+    "Name": "ISO 14001",
+    "IssuingAuthority": "ISO",
+    "ValidityPeriod": "2025-06-30",
+    "Suppliers": [
+      {
+        "SupplierID": 102,
+        "CertificationDate": "2022-05-20",
+        "Status": "Active"
+      }
+    ]
+  }
+]
